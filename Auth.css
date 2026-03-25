@@ -1,0 +1,109 @@
+/* =========================
+   AUTH PAGE STYLE (Login/Register/Forgot)
+========================= */
+
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f6fb; 
+  position: relative;
+}
+
+/* Animated Background Blob */
+.auth-blob {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #7aa7ff, #2a64ff);
+  filter: blur(55px);
+  opacity: 0.55;
+  animation: floatBlob 6s infinite ease-in-out;
+  top: 10%;
+  right: 10%;
+}
+
+@keyframes floatBlob {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-25px) scale(1.05); }
+  100% { transform: translateY(0px) scale(1); }
+}
+
+/* Centered Auth Card */
+.auth-card {
+  width: 400px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 5;
+  animation: fadeUp 0.7s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.auth-title {
+  font-size: 28px;
+  color: #1e3a8a;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.auth-sub {
+  text-align: center;
+  color: #6b7280;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.auth-card input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+}
+
+.auth-card input:focus {
+  border-color: #2a64ff;
+}
+
+/* Buttons */
+.auth-btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: #2a64ff;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.auth-btn-primary:hover {
+  background: #1e4bd8;
+  transform: translateY(-2px);
+}
+
+/* Bottom Links */
+.auth-bottom {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.auth-bottom a {
+  color: #2a64ff;
+}

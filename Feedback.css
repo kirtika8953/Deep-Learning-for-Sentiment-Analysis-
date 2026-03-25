@@ -1,0 +1,102 @@
+.feedback-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #e8f1ff, #f3f7ff);
+}
+
+.feedback-card {
+  width: 420px;
+  padding: 35px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.feedback-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #132043;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.feedback-subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #6c7a93;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-box,
+.textarea-box {
+  width: 95%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #bcd0ff;
+  background: #f8faff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+
+.input-box:focus,
+.textarea-box:focus {
+  border-color: #1f6bff;
+  background: white;
+}
+
+.textarea-box {
+  height: 120px;
+  resize: none;
+}
+
+.submit-btn {
+  padding: 14px;
+  background-color: #1f6bff;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1553c9;
+}
+
+.error-text {
+  color: #d9534f;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.success-text {
+  color: #2ecc71;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

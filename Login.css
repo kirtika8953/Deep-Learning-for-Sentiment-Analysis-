@@ -1,0 +1,123 @@
+/* Whole page layout */
+.login-page {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, #e8f1ff, #f3f7ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* White box */
+.login-card {
+  width: 520px;
+  background: white;
+  padding: 45px 50px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Titles */
+.login-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0;
+  color: #0d1b2a;
+}
+
+.login-subtitle {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #3b4a5a;
+}
+
+/* Input fields */
+.input-group {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-group input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1.8px solid #d0d8e8;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  border-color: #1f6bff;
+  outline: none;
+  box-shadow: 0px 0px 6px rgba(31,107,255,0.3);
+}
+
+/* Big login button */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 25px;
+  background: #1f6bff;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.login-btn:hover {
+  background: #1553c9;
+}
+
+/* CLEAN TEXT LINKS */
+.text-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 8px;
+}
+
+.text-link {
+  color: #1f6bff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+/* Error text */
+.error-text {
+  color: #d9534f;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: -5px;
+  font-size: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Input error highlight */
+.error-input {
+  border-color: #d9534f !important;
+  background: #ffecec;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.success-text {
+  color: #1f6bff;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: -5px;
+  font-size: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}

@@ -1,0 +1,69 @@
+/* Remove the white bar */
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #f5f7fc;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 40px;
+  box-sizing: border-box;
+
+  background: transparent; /* No white line */
+  position: fixed; /* stays at top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Left side logo */
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1a4ce8;
+  text-decoration: none;
+}
+
+/* Right side menu */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  font-size: 18px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-right a:hover {
+  color: #1a4ce8;
+}
+
+/* Logout button */
+.logout-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  white-space: nowrap; /* Fix cutoff */
+}
+
+.logout-btn:hover {
+  background: #e04444;
+}
+/* Fix content going under the navbar */
+.page-content {
+  padding-top: 100px;   /* Adjust if needed */
+}

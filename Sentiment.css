@@ -1,0 +1,63 @@
+/* PAGE BACKGROUND */
+.sentiment-wrapper {
+  padding: 40px 100px;       /* moved content UP (was 80px before) */
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #e8f1ff, #f3f7ff);
+  position: relative;
+}
+
+/* TITLE */
+.sentiment-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+/* SUBTEXT */
+.sentiment-subtext {
+  font-size: 18px;
+  color: #3b4a5a;
+  max-width: 650px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* TEXTAREA */
+.sentiment-box {
+  width: 70%;
+  height: 180px;
+  padding: 18px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 2px solid #d0ddf7;
+  outline: none;
+  resize: none;
+  background: #ffffffc9;
+  transition: 0.25s ease;
+}
+
+.sentiment-box:focus {
+  border-color: #1f6bff;
+  background: #ffffff;
+}
+
+/* BUTTON */
+button {
+  background-color: #007bff; /* Blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Keep button blue even when disabled */
+button:disabled {
+  background-color: #007bff !important;
+  opacity: 0.7; /* Slight transparency */
+  cursor: not-allowed;
+}
+button:hover:enabled {
+  background-color: #0056b3; /* Darker blue on hover */
+}

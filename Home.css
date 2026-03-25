@@ -1,0 +1,135 @@
+/* prevent any scrollbars */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* full page wrapper */
+.home-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;       /* move text higher */
+  padding: 80px 90px 40px 90px;  /* reduced top padding */
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, #e8f1ff, #f3f7ff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* LEFT CONTENT */
+.home-left {
+  width: 50%;
+  z-index: 3;
+}
+
+.main-title {
+  font-size: 58px;
+  font-weight: 900;
+  line-height: 1.15;
+  color: #0d1b2a;
+}
+
+.highlight {
+  color: #1f6bff;
+}
+
+.sub-text {
+  font-size: 19px;
+  margin-top: 25px;
+  max-width: 520px;
+  color: #3b4a5a;
+  line-height: 1.6;
+}
+
+/* BUTTON GROUP */
+.btn-row {
+  margin-top: 35px;
+  display: flex;
+  gap: 18px;
+}
+
+.primary-btn {
+  padding: 14px 40px;
+  background-color: #1f6bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.primary-btn:hover {
+  background-color: #1553c9;
+}
+
+.secondary-btn {
+  padding: 14px 40px;
+  border: 2px solid #1f6bff;
+  background: white;
+  color: #1f6bff;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.secondary-btn:hover {
+  background-color: #e9f1ff;
+}
+
+/* RIGHT SIDE AI ANIMATION */
+.home-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Main soft animated circle */
+.soft-circle {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(59,130,246,0.45), rgba(59,130,246,0.18), rgba(255,255,255,0));
+  border-radius: 50%;
+  filter: blur(3px);
+  animation: float 7s ease-in-out infinite alternate;
+}
+
+/* floating animation */
+@keyframes float {
+  0% { transform: translateY(0px) scale(1); opacity: 0.55; }
+  100% { transform: translateY(-25px) scale(1.06); opacity: 0.75; }
+}
+
+/* soft gradient spread behind animation */
+.home-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -180px;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(56,122,255,0.25),
+    rgba(56,122,255,0.12),
+    transparent 70%
+  );
+  filter: blur(20px);
+  z-index: 0;
+  animation: softGlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes softGlow {
+  0% { transform: scale(1); opacity: 0.35; }
+  100% { transform: scale(1.08); opacity: 0.5; }
+}

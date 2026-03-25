@@ -1,0 +1,119 @@
+/* ======== PAGE BACKGROUND ======== */
+.dashboard-container {
+  background-color: #edf3ff;
+  min-height: 100vh;              /* MORE SPACE ADDED */
+  padding: 60px 70px;             /* INCREASED PADDING */
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ======== HEADINGS ======== */
+.welcome-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #063a8c;
+  margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+
+/* ======== TOP SENTIMENT CARDS ======== */
+.stats-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 50px;                       /* MORE GAPS BETWEEN CARDS */
+  margin-bottom: 60px;             /* ADDED EXTRA SPACE BELOW CARDS */
+}
+
+.stat-card {
+  background: white;
+  width: 200px;
+  height: 100px;                   /* Bigger cards */
+  padding: 20px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  transition: 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+}
+
+.stat-emoji {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.stat-label {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.stat-number {
+  font-size: 32px;
+  color: #0048ff;
+  font-weight: 700;
+}
+
+
+/* ======== BOTTOM FEATURE CARDS ======== */
+.sections-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 10px;               /* ADDED MORE SPACE ABOVE */
+}
+
+.section-card {
+  background: white;
+  width: 560px;
+  height: 200px;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  transition: 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-6px);
+}
+
+.section-emoji {
+  font-size: 30px;
+}
+
+.section-card h2 {
+  font-size: 20px;
+  margin-top: 8px;
+  font-weight: 700;
+  color: #063a8c;
+}
+
+.section-card p {
+  font-size: 17px;
+  color: #555;
+  margin-top: 6px;
+}
+
+.section-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.section-btn:hover {
+  background-color: #084cd1;
+}

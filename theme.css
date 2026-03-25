@@ -1,0 +1,123 @@
+/* GLOBAL RESET */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(to bottom right, #e8f1ff, #f3f7ff);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden; /* No scrollbars anywhere */
+}
+
+/* UNIVERSAL PAGE WRAPPER */
+.page-container {
+  width: 100%;
+  height: 100vh;
+  padding: 90px 90px 40px 90px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+/* PAGE TITLE */
+.page-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0d1b2a;
+  margin-bottom: 20px;
+}
+
+/* SUBTEXT */
+.page-subtext {
+  font-size: 18px;
+  color: #3b4a5a;
+  max-width: 550px;
+  line-height: 1.55;
+  margin-bottom: 30px;
+}
+
+/* INPUT FIELDS */
+.input-field {
+  padding: 14px;
+  width: 320px;
+  border-radius: 10px;
+  border: 2px solid #c6d7ff;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 18px;
+  transition: 0.25s ease;
+}
+
+.input-field:focus {
+  border-color: #1f6bff;
+  background: #eef4ff;
+}
+
+/* BUTTONS */
+.primary-btn {
+  padding: 14px 38px;
+  background-color: #1f6bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.primary-btn:hover {
+  background-color: #1553c9;
+}
+
+.secondary-btn {
+  padding: 14px 38px;
+  border: 2px solid #1f6bff;
+  background: white;
+  color: #1f6bff;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.secondary-btn:hover {
+  background-color: #e9f1ff;
+}
+
+/* RIGHT SIDE BLUE GLOW (SAME AS HOME) */
+.page-container::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -200px;
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(
+    circle,
+    rgba(56,122,255,0.25),
+    rgba(56,122,255,0.12),
+    transparent 70%
+  );
+  filter: blur(20px);
+  z-index: 0;
+  animation: softGlowPages 10s ease-in-out infinite alternate;
+}
+
+@keyframes softGlowPages {
+  0% { transform: scale(1); opacity: 0.35; }
+  100% { transform: scale(1.08); opacity: 0.5; }
+}
+
+/* CARD FOR FORMS */
+.form-card {
+  background: white;
+  padding: 35px;
+  border-radius: 14px;
+  width: 380px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  z-index: 2;
+}
